@@ -1,30 +1,30 @@
 # The set of languages for which implicit dependencies are needed:
-set(CMAKE_DEPENDS_LANGUAGES
+SET(CMAKE_DEPENDS_LANGUAGES
   "C"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/spaceball/spaceball.c" "/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/spaceball.dir/progs/demos/spaceball/spaceball.c.o"
-  "/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/spaceball/vmath.c" "/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/spaceball.dir/progs/demos/spaceball/vmath.c.o"
+SET(CMAKE_DEPENDS_CHECK_C
+  "/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/spaceball/spaceball.c" "/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/spaceball.dir/progs/demos/spaceball/spaceball.c.o"
+  "/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/spaceball/vmath.c" "/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/spaceball.dir/progs/demos/spaceball/vmath.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+SET(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_C
+SET(CMAKE_TARGET_DEFINITIONS
   "HAVE_CONFIG_H"
   )
 
+# Targets to which this target links.
+SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/freeglut.dir/DependInfo.cmake"
+  )
+
 # The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+SET(CMAKE_C_TARGET_INCLUDE_PATH
   "src"
   "include"
   "."
   )
-
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/freeglut.dir/DependInfo.cmake"
-  )
-
-# Fortran module output directory.
-set(CMAKE_Fortran_TARGET_MODULE_DIR "")
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

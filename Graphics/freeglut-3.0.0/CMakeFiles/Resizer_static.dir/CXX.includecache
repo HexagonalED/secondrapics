@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/Resizer/Resizer.cpp
+/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/Resizer/Resizer.cpp
 stdio.h
 -
 GL/freeglut.h

@@ -37,6 +37,16 @@ void evaluate(const CubicBezierCurve *curve, const REAL t, Point value)
     VECTOR2_X_SCALA_ADD(value, curve->control_pts[3], b3);
 }
 
-void evaluate_curvature(const CubicBezierCurve *curve, const REAL t, Point value){
 
+
+void evaluate_curvature(const CubicBezierCurve *curve, const REAL t, REAL* a, REAL* b, REAL* value){
+    const t_sq = t*t;
+    const REAL c0 = (a[1]*b[0]            )-(a[0]*b[1]                        )*3/2;
+    const REAL c1 = (a[1]*b[1]+2*a[2]*b[0])-(2*a[0]*b[2]+a[1]*b[1]            )*3/2;
+    const REAL c2 = (a[1]*b[2]+2*a[2]*b[1])-(3*a[0]*b[3]+2*a[1]*b[2]+a[2]*b[1])*3/2;
+    const REAL c3 = (a[1]*b[3]+2*a[2]*b[2])-(4*a[0]*b[4]+3*a[1]*b[3]+2*a[2]*b[2])*3/2;
+    const REAL c4 = (a[1]*b[4]+2*a[2]*b[3])-(            4*a[1]*b[4]+3*a[2]*b[3])*3/2;
+    const REAL c5 = (          2*a[2]*b[4])-(                        4*a[2]*b[4])*3/2;
+
+    (*value) = c0+c1*t+c2*t_sq+c3*t_sq*t+c4*t_sq*t_sq+c5*t_sq*t_sq*t;
 }

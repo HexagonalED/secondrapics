@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/freeglut.dir/src/fg_callbacks.c.o"
   "CMakeFiles/freeglut.dir/src/fg_cursor.c.o"
   "CMakeFiles/freeglut.dir/src/fg_display.c.o"
@@ -48,6 +48,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
-  include(CMakeFiles/freeglut.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang C)
+  INCLUDE(CMakeFiles/freeglut.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/smooth_opengl3/smooth_opengl3.c
+/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/smooth_opengl3/smooth_opengl3.c
 GL/freeglut.h
 -
 stdlib.h

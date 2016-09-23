@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/Fractals_random/fractals_random.c
+/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/Fractals_random/fractals_random.c
 GL/freeglut.h
 -
 stdio.h

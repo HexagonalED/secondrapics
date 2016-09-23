@@ -1,44 +1,44 @@
 Determining if files usbhid.h exist failed with the following output:
-Change Dir: /home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp
+Change Dir: /home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e4d61/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e4d61.dir/build.make CMakeFiles/cmTC_e4d61.dir/build
-make[1]: Entering directory '/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e4d61.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -pedantic    -o CMakeFiles/cmTC_e4d61.dir/CheckIncludeFiles.c.o   -c /home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: usbhid.h: No such file or directory
+Run Build Command:/usr/bin/make "cmTryCompileExec4201583163/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4201583163.dir/build.make CMakeFiles/cmTryCompileExec4201583163.dir/build
+make[1]: Entering directory `/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4201583163.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -Wall -pedantic    -o CMakeFiles/cmTryCompileExec4201583163.dir/CheckIncludeFiles.c.o   -c /home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: usbhid.h: No such file or directory
+ #include <usbhid.h>
+                    ^
 compilation terminated.
-CMakeFiles/cmTC_e4d61.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e4d61.dir/CheckIncludeFiles.c.o' failed
-make[1]: *** [CMakeFiles/cmTC_e4d61.dir/CheckIncludeFiles.c.o] Error 1
-make[1]: Leaving directory '/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_e4d61/fast' failed
-make: *** [cmTC_e4d61/fast] Error 2
+make[1]: Leaving directory `/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4201583163.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec4201583163/fast] Error 2
 
 Source:
 /* */
 #include <usbhid.h>
 
 
-int main(void){return 0;}
+int main(){return 0;}
 
 Determining if the function XParseGeometry exists failed with the following output:
-Change Dir: /home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp
+Change Dir: /home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4dfdf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4dfdf.dir/build.make CMakeFiles/cmTC_4dfdf.dir/build
-make[1]: Entering directory '/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4dfdf.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -pedantic -DCHECK_FUNCTION_EXISTS=XParseGeometry   -o CMakeFiles/cmTC_4dfdf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_4dfdf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4dfdf.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -pedantic -DCHECK_FUNCTION_EXISTS=XParseGeometry    CMakeFiles/cmTC_4dfdf.dir/CheckFunctionExists.c.o  -o cmTC_4dfdf -rdynamic -lm 
-CMakeFiles/cmTC_4dfdf.dir/CheckFunctionExists.c.o: In function `main':
-CheckFunctionExists.c:(.text+0x12): undefined reference to `XParseGeometry'
+Run Build Command:/usr/bin/make "cmTryCompileExec1858868922/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1858868922.dir/build.make CMakeFiles/cmTryCompileExec1858868922.dir/build
+make[1]: Entering directory `/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1858868922.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -pedantic -DCHECK_FUNCTION_EXISTS=XParseGeometry   -o CMakeFiles/cmTryCompileExec1858868922.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1858868922
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1858868922.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -pedantic -DCHECK_FUNCTION_EXISTS=XParseGeometry    CMakeFiles/cmTryCompileExec1858868922.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1858868922 -rdynamic -lm 
+CMakeFiles/cmTryCompileExec1858868922.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `XParseGeometry'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4dfdf.dir/build.make:97: recipe for target 'cmTC_4dfdf' failed
-make[1]: *** [cmTC_4dfdf] Error 1
-make[1]: Leaving directory '/home/hexagonaled/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_4dfdf/fast' failed
-make: *** [cmTC_4dfdf/fast] Error 2
+make[1]: Leaving directory `/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1858868922] Error 1
+make: *** [cmTryCompileExec1858868922/fast] Error 2
 
 

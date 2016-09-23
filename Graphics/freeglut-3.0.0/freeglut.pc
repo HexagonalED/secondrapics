@@ -1,5 +1,5 @@
 prefix=/usr/local
-libdir=/usr/local/lib
+libdir=/usr/local/lib/x86_64-linux-gnu
 includedir=${prefix}/include
 
 Name: glut

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hexagonaled/Graphics/freeglut-3.0.0/progs/demos/One/one.c
+/home/hexagonaled/secondrapics/Graphics/freeglut-3.0.0/progs/demos/One/one.c
 stdio.h
 -
 stdlib.h
