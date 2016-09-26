@@ -238,17 +238,18 @@ void display_callback(void)
   for(i=0;i<32;i++){
     evaluate_curvature(&curve,t_tmp,aCoeff,bCoeff,&retVal);
     REAL save = retVal;
+    REAL save_t = t_tmp;
     t_tmp+=1/32;
     evaluate_curvature(&curve,t_tmp,aCoeff,bCoeff,&retVal);
     if(save*retVal<=0){
       int j;
       int same=-1;
       for(j=0;j<tCount;j++){
-        if(t_list[j]==save)
+        if(t_list[j]==save_t)
           same *= -1;
       }
       if(same<0){
-        t_list[tCount]=save;
+        t_list[tCount]=save_t;
         tCount++;
       }
     }
@@ -259,10 +260,11 @@ void display_callback(void)
       for(i=0;i<32;i++){
         evaluate_curvature(&curve,t_tmp,aCoeff,bCoeff,&retVal);
         REAL save = retVal;
+        REAL save_t = t_tmp;
         t_tmp+=pow(1/32,depth+1);
         evaluate_curvature(&curve,t_tmp,aCoeff,bCoeff,&retVal);
         if(save*retVal<=0)
-          t_list[tNOW] = save;
+          t_list[tNOW] = save_t;
       }
     }
   }
