@@ -12,6 +12,8 @@ int edit_ctrlpts_idx = -1;
 REAL xCoeff[3];
 REAL yCoeff[3];
 REAL inflecCoeff[3];
+Point ptG[15];
+int ptCount;
 
 
 
@@ -54,6 +56,7 @@ void display_callback(void)
 {
 #define RES 100
   int i;
+  ptCount =0;
 
   /* curve */
   glClear(GL_COLOR_BUFFER_BIT);
@@ -112,12 +115,16 @@ void display_callback(void)
     if(xCoeff[2]!=0){
       if(0<=tx1&&tx1<=1){
         evaluate(&curve,tx1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;        
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",tx1,pt[0],pt[1]);
       }
 
       if(0<=tx2&&tx2<=1){
         evaluate(&curve,tx2,pt);
+        ptG[ptCount] = pt;
+        ptCount++;
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",tx2,pt[0],pt[1]);
       }
@@ -125,6 +132,8 @@ void display_callback(void)
     else{
       if(0<=tx1&&tx1<=1){
         evaluate(&curve,tx1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;        
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",tx1,pt[0],pt[1]);
       }
@@ -149,12 +158,16 @@ void display_callback(void)
     if(yCoeff[2]!=0){
       if(0<=ty1&&ty1<=1){
         evaluate(&curve,ty1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",ty1,pt[0],pt[1]);
       }
 
       if(0<=ty2&&ty2<=1){
         evaluate(&curve,ty2,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",ty2,pt[0],pt[1]);
       }
@@ -162,6 +175,8 @@ void display_callback(void)
     else{
       if(0<=ty1&&ty1<=1){
         evaluate(&curve,ty1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",ty1,pt[0],pt[1]);
       }
@@ -192,12 +207,16 @@ void display_callback(void)
     if(inflecCoeff[2]!=0){
       if(0<=tInflec1&&tInflec1<=1){
         evaluate(&curve,tInflec1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Inflection Point : t = %lf, (x,y) = (%lf,%lf)\n",tInflec1,pt[0],pt[1]);
       }
 
       if(0<=tInflec2&&tInflec2<=1){
         evaluate(&curve,tInflec2,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Inflection Point : t = %lf, (x,y) = (%lf,%lf)\n",tInflec2,pt[0],pt[1]);
       }
@@ -205,6 +224,8 @@ void display_callback(void)
     else{
       if(0<=tInflec1&&tInflec1<=1){
         evaluate(&curve,tInflec1,pt);
+        ptG[ptCount] = pt;
+        ptCount++;         
         glVertex2f(pt[0],pt[1]);
         printf("Inflection Point : t = %lf, (x,y) = (%lf,%lf)\n",tInflec1,pt[0],pt[1]);
       }
@@ -274,10 +295,27 @@ void display_callback(void)
 
   for(i=0;i<tCount;i++){
     evaluate(&curve,t_list[i],pt);
+    ptG[ptCount] = pt;
+    ptCount++;         
     glVertex2f(pt[0],pt[1]);
     printf("Curvature Extreme Point : t = %lf, (x,y) = (%lf,%lf)\n",t_list[i],pt[0],pt[1]);
   }
   glEnd();
+
+
+  /* bca */
+  for(i=0;i<=tCount;i++){
+    Point pt0;
+    Point pt1;
+    evaluate(&curve,0,pt0);
+    evaluate(&curve,1,pt1);
+    Point ptL = i==0 ? pt0 : ptG[i-1];
+    Point ptR = i==tCount ? pt1 : ptG[i];
+    Point vecH;
+
+  }
+
+
 
 
   printf("\n\n");
